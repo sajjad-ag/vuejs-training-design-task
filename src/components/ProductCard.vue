@@ -2,14 +2,14 @@
   <div
     :class="
       cn(
-        'p-4 flex justify-between border border-gray-200 bg-white',
+        'p-4 flex justify-between border-2 border-gray-200  bg-white',
         props.class
       )
     "
   >
     <div>
       <div class="flex items-center gap-2">
-        <button>
+        <button class="cursor-pointer">
           <Star class="w-4 h-4 text-gray-200" />
         </button>
         <span class="font-bold">
@@ -17,6 +17,32 @@
         </span>
       </div>
       <p>{{ props.code }}</p>
+      <div v-if="props.attributes" class="flex gap-2">
+        <span
+          v-if="props.attributes.legs"
+          :key="key"
+          :class="
+            cn(
+              'px-2 rounded-full font-semibold text-sm',
+              props.attributes.legs.color_code
+            )
+          "
+        >
+          Legs: {{ props.attributes.legs.text }}
+        </span>
+        <span
+          v-if="props.attributes.color"
+          :key="key"
+          :class="
+            cn(
+              'px-2 rounded-full font-semibold text-sm',
+              props.attributes.color.color_code
+            )
+          "
+        >
+          Color: {{ props.attributes.color.text }}
+        </span>
+      </div>
       <p>Price: {{ props.price }}</p>
     </div>
     <div>

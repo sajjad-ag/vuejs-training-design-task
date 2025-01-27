@@ -30,14 +30,30 @@ const products = [
     name: "Customizable Desk",
     code: "[DESK0005]",
     price: "750.00",
+    attributes: {
+      color: {
+        text: "White",
+        color_code: "bg-[#8DDED5]",
+      },
+      legs: {
+        text: "Custom",
+        color_code: "bg-[#B9E9BF]",
+      },
+    },
     image: "/images/desk.png",
   },
   {
     name: "Customizable Desk",
     code: "[DESK0006]",
     attributes: {
-      color: "black",
-      legs: "Custom",
+      color: {
+        text: "Black",
+        color_code: "bg-[#E5DCF9]",
+      },
+      legs: {
+        text: "Custom",
+        color_code: "bg-[#B9E9BF]",
+      },
     },
     price: "750.00",
     image: "/images/desk.png",
@@ -46,7 +62,10 @@ const products = [
     name: "Stool",
     code: "[D_0045_B]",
     attributes: {
-      color: "Dark Blue",
+      color: {
+        text: "Dark Blue",
+        color_code: "bg-[#8DDED5]",
+      },
     },
     price: "500.00",
   },
@@ -54,7 +73,10 @@ const products = [
     name: "Stool",
     code: "[D_0045_G]",
     attributes: {
-      color: "Green",
+      color: {
+        text: "Green",
+        color_code: "bg-[#E5DCF9]",
+      },
     },
     price: "500.00",
   },
@@ -106,7 +128,10 @@ const products = [
     name: "Conference Chair",
     code: "[E-COM12]",
     attributes: {
-      legs: "Steel",
+      legs: {
+        text: "Steel",
+        color_code: "bg-[#BFD7F4]",
+      },
     },
     price: "33.00",
     image: "/images/conference_chair.jpg",
@@ -115,7 +140,10 @@ const products = [
     name: "Conference Chair",
     code: "[E-COM13]",
     attributes: {
-      legs: "Aluminum",
+      legs: {
+        text: "Aluminum",
+        color_code: "bg-[#98A5EF]",
+      },
     },
     price: "39.40",
     image: "/images/conference_chair.jpg",
@@ -191,14 +219,15 @@ const products = [
 
 <template>
   <main class="p-4">
-    <div class="grid grid-cols-12 gap-2">
+    <div class="grid grid-cols-12 gap-x-4 gap-y-2">
       <ProductCard
-        class="col-span-3"
+        class="col-span-12 md:col-span-6 lg:col-span-3"
         v-for="product in products"
         :name="product.name"
         :code="product.code"
         :price="product.price"
         :image="product.image"
+        :attributes="product.attributes"
       />
     </div>
   </main>

@@ -6,13 +6,16 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
+  Filter,
   Settings,
+  ChevronDown,
 } from "lucide-vue-next";
+import { Search } from "lucide-vue-next";
 </script>
 
 <template>
   <nav class="bg-white p-4 shadow-md">
-    <div class="flex justify-between">
+    <div class="flex justify-between flex-wrap gap-4">
       <div class="flex items-center gap-2">
         <span class="rounded-sm text-white bg-[#6D4B65] px-2 py-1">New</span>
         <div class="flex items-end gap-2">
@@ -23,12 +26,25 @@ import {
           />
         </div>
       </div>
-      <div>
+      <div class="relative">
+        <Search
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+        />
+        <button
+          class="absolute top-1/2 left-10 transform -translate-y-1/2 bg-[#6D4B65] px-2 py-1 rounded-sm hover:bg-[#6D4B65]/80 cursor-pointer"
+        >
+          <Filter class="w-4 h-4 text-white" />
+        </button>
         <input
           type="text"
-          placeholder="Search"
-          class="border border-gray-300 rounded-md p-1"
+          placeholder="Search..."
+          class="border border-gray-300 rounded-md p-1 pl-20 pr-8 w-full"
         />
+        <button
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 border border-l-[#F8F7F8] border-r-0 border-t-0 border-b-0 h-full w-6 rounded-r-sm cursor-pointer flex justify-center items-center"
+        >
+          <ChevronDown class="w-4 h-4 text-[#ABACAF] pointer-events-none" />
+        </button>
       </div>
       <div class="flex items-center gap-4">
         <div class="flex items-center gap-1">
