@@ -30,7 +30,7 @@ const products = [
     name: "Customizable Desk",
     code: "[DESK0005]",
     price: "750.00",
-    image: "/images/customizable_desk.png",
+    image: "/images/desk.png",
   },
   {
     name: "Customizable Desk",
@@ -40,7 +40,7 @@ const products = [
       legs: "Custom",
     },
     price: "750.00",
-    image: "/images/customizable_desk.png",
+    image: "/images/desk.png",
   },
   {
     name: "Stool",
@@ -75,26 +75,31 @@ const products = [
     name: "Large Cabinet",
     code: "[E-COM07]",
     price: "320.00",
+    image: "/images/large_cabinet.jpg",
   },
   {
     name: "Storage Box",
     code: "[E-COM08]",
     price: "15.80",
+    image: "/images/storage_box.jpg",
   },
   {
     name: "Large Desk",
     code: "[E-COM09]",
     price: "1,799.00",
+    image: "/images/customizable_desk.png",
   },
   {
     name: "Pedal Bin",
     code: "[E-COM10]",
     price: "47.00",
+    image: "/images/pedal_bin.jpg",
   },
   {
     name: "Cabinet with Doors",
     code: "[E-COM11]",
     price: "140.00",
+    image: "/images/cabinet_with_doors.jpg",
   },
   {
     name: "Conference Chair",
@@ -103,6 +108,7 @@ const products = [
       legs: "Steel",
     },
     price: "33.00",
+    image: "/images/conference_chair.jpg",
   },
   {
     name: "Conference Chair",
@@ -111,61 +117,73 @@ const products = [
       legs: "Aluminum",
     },
     price: "39.40",
+    image: "/images/conference_chair.jpg",
   },
   {
     name: "Customized Cabinet (Metric)",
     code: "[E-COM98]",
     price: "210.00",
+    image: "/images/cabinet_with_doors.jpg",
   },
   {
     name: "Customized Cabinet (USA)",
     code: "[E-COM99]",
     price: "200.00",
+    image: "/images/cabinet_with_doors.jpg",
   },
   {
     name: "Expenses",
     code: "[EXP_GEN]",
     price: "1.00",
+    image: "/images/expenses.png",
   },
   {
     name: "Desk Organizer",
     code: "[FURN_0001]",
     price: "5.10",
+    image: "/images/desk_organizer.jpg",
   },
   {
     name: "Desk Pad",
     code: "[FURN_0002]",
     price: "1.98",
+    image: "/images/desk_pad.jpg",
   },
   {
     name: "LED Lamp",
     code: "[FURN_0003]",
     price: "0.90",
+    image: "/images/led_lamp.jpg",
   },
   {
     name: "Letter Tray",
     code: "[FURN_0004]",
     price: "4.80",
+    image: "/images/letter_tray.jpg",
   },
   {
     name: "Magnetic Board",
     code: "[FURN_0005]",
     price: "1.98",
+    image: "/images/magnetic_board.jpg",
   },
   {
     name: "Monitor Stand",
     code: "[FURN_0006]",
     price: "3.19",
+    image: "/images/monitor_stand.jpg",
   },
   {
     name: "Newspaper Rack",
     code: "[FURN_0007]",
     price: "1.28",
+    image: "/images/newspaper_rack.jpg",
   },
   {
     name: "Small Shelf",
     code: "[FURN_0008]",
     price: "2.83",
+    image: "/images/small_shelf.jpg",
   },
 ];
 </script>
