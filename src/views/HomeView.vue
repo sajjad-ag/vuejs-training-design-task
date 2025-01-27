@@ -70,6 +70,7 @@ const products = [
     name: "Corner Desk Right Sit",
     code: "[E-COM06]",
     price: "147.00",
+    image: "/images/corner_desk.jpg",
   },
   {
     name: "Large Cabinet",

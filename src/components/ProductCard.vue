@@ -8,10 +8,14 @@
     "
   >
     <div>
-      <span class="font-bold flex items-center gap-2">
-        <Star class="w-4 h-4 text-gray-200" />
-        {{ props.name }}
-      </span>
+      <div class="flex items-center gap-2">
+        <button>
+          <Star class="w-4 h-4 text-gray-200" />
+        </button>
+        <span class="font-bold">
+          {{ props.name }}
+        </span>
+      </div>
       <p>{{ props.code }}</p>
       <p>Price: {{ props.price }}</p>
     </div>
