@@ -1,7 +1,186 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import ProductCard from "@/components/ProductCard.vue";
+
+const products = [
+  {
+    name: "Whiteboard pen",
+    code: "[CONS_0001]",
+    price: "1.20",
+    image: "/images/whiteboard_pen.png",
+  },
+  {
+    name: "Simple pen",
+    code: "[CONS_0002]",
+    price: "1.20",
+    image: "/images/pen.jpg",
+  },
+  {
+    name: "Screw",
+    code: "[CONS_25630]",
+    price: "0.20",
+    image: "/images/screw.jpg",
+  },
+  {
+    name: "Bolt",
+    code: "[CONS_89957]",
+    price: "0.50",
+    image: "/images/bolt.jpg",
+  },
+  {
+    name: "Customizable Desk",
+    code: "[DESK0005]",
+    price: "750.00",
+    image: "/images/customizable_desk.png",
+  },
+  {
+    name: "Customizable Desk",
+    code: "[DESK0006]",
+    attributes: {
+      color: "black",
+      legs: "Custom",
+    },
+    price: "750.00",
+    image: "/images/customizable_desk.png",
+  },
+  {
+    name: "Stool",
+    code: "[D_0045_B]",
+    attributes: {
+      color: "Dark Blue",
+    },
+    price: "500.00",
+  },
+  {
+    name: "Stool",
+    code: "[D_0045_G]",
+    attributes: {
+      color: "Green",
+    },
+    price: "500.00",
+  },
+  {
+    name: "Stool",
+    code: "[D_0045_GR]",
+    attributes: {
+      color: "Grey",
+    },
+    price: "500.00",
+  },
+  {
+    name: "Corner Desk Right Sit",
+    code: "[E-COM06]",
+    price: "147.00",
+  },
+  {
+    name: "Large Cabinet",
+    code: "[E-COM07]",
+    price: "320.00",
+  },
+  {
+    name: "Storage Box",
+    code: "[E-COM08]",
+    price: "15.80",
+  },
+  {
+    name: "Large Desk",
+    code: "[E-COM09]",
+    price: "1,799.00",
+  },
+  {
+    name: "Pedal Bin",
+    code: "[E-COM10]",
+    price: "47.00",
+  },
+  {
+    name: "Cabinet with Doors",
+    code: "[E-COM11]",
+    price: "140.00",
+  },
+  {
+    name: "Conference Chair",
+    code: "[E-COM12]",
+    attributes: {
+      legs: "Steel",
+    },
+    price: "33.00",
+  },
+  {
+    name: "Conference Chair",
+    code: "[E-COM13]",
+    attributes: {
+      legs: "Aluminum",
+    },
+    price: "39.40",
+  },
+  {
+    name: "Customized Cabinet (Metric)",
+    code: "[E-COM98]",
+    price: "210.00",
+  },
+  {
+    name: "Customized Cabinet (USA)",
+    code: "[E-COM99]",
+    price: "200.00",
+  },
+  {
+    name: "Expenses",
+    code: "[EXP_GEN]",
+    price: "1.00",
+  },
+  {
+    name: "Desk Organizer",
+    code: "[FURN_0001]",
+    price: "5.10",
+  },
+  {
+    name: "Desk Pad",
+    code: "[FURN_0002]",
+    price: "1.98",
+  },
+  {
+    name: "LED Lamp",
+    code: "[FURN_0003]",
+    price: "0.90",
+  },
+  {
+    name: "Letter Tray",
+    code: "[FURN_0004]",
+    price: "4.80",
+  },
+  {
+    name: "Magnetic Board",
+    code: "[FURN_0005]",
+    price: "1.98",
+  },
+  {
+    name: "Monitor Stand",
+    code: "[FURN_0006]",
+    price: "3.19",
+  },
+  {
+    name: "Newspaper Rack",
+    code: "[FURN_0007]",
+    price: "1.28",
+  },
+  {
+    name: "Small Shelf",
+    code: "[FURN_0008]",
+    price: "2.83",
+  },
+];
 </script>
 
 <template>
-  <main></main>
+  <main class="p-4">
+    <div class="grid grid-cols-12 gap-2">
+      <ProductCard
+        class="col-span-3"
+        v-for="product in products"
+        :name="product.name"
+        :code="product.code"
+        :price="product.price"
+        :image="product.image"
+      />
+    </div>
+  </main>
 </template>
