@@ -24,15 +24,20 @@
         </span>
       </div>
       <span class="text-[0.9625rem]">{{ product.code }}</span>
-      <div v-if="product.attributes" class="flex gap-2 flex-wrap">
+      <div v-if="product.attributes" class="flex gap-1 flex-wrap">
         <span
           v-if="product.attributes.legs"
           :key="key"
           :class="
-            cn('px-1 rounded-[50rem]', product.attributes.legs.color_code)
+            cn(
+              'px-[0.82rem] py-[0.25rem] rounded-[50rem] inline-flex items-center leading-3 relative max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[2.7ch]',
+              product.attributes.legs.color_code
+            )
           "
         >
-          <div class="text-[0.85rem]">
+          <div
+            class="text-[0.85rem] font-[500] truncate inline-block whitespace-nowrap overflow-ellipsis max-w-full"
+          >
             Legs: {{ product.attributes.legs.text }}
           </div>
         </span>
@@ -40,15 +45,21 @@
           v-if="product.attributes.color"
           :key="key"
           :class="
-            cn('px-1 rounded-[50rem]', product.attributes.color.color_code)
+            cn(
+              'px-[0.82rem] py-[0.25rem] rounded-[50rem] inline-flex items-center leading-3 relative max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[2.7ch]',
+              product.attributes.color.color_code
+            )
           "
         >
-          <div class="text-[0.85rem]">
+          <div
+            class="text-[0.85rem] font-[500] truncate inline-block whitespace-nowrap overflow-ellipsis max-w-full"
+          >
             Color: {{ product.attributes.color.text }}
           </div>
         </span>
       </div>
-      <div v-else></div>
+      <!-- <div v-else></div>/ -->
+      <
       <span class="text-[0.9625rem]">Price: {{ product.price }}</span>
     </div>
     <div class="col-span-2 max-w-full h-fit">
