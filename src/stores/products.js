@@ -45,7 +45,7 @@ export const useProductsStore = defineStore("products", () => {
           color_code: "bg-[#B9E9BF]",
         },
       },
-      image: "./images/desk.png",
+      image: "./images/customizable_desk.png",
       favorite: false,
     },
     {
@@ -62,7 +62,7 @@ export const useProductsStore = defineStore("products", () => {
         },
       },
       price: "750.00",
-      image: "./images/desk.png",
+      image: "./images/customizable_desk.png",
       favorite: false,
     },
     {
@@ -126,7 +126,7 @@ export const useProductsStore = defineStore("products", () => {
       name: "Large Desk",
       code: "[E-COM09]",
       price: "1,799.00",
-      image: "./images/customizable_desk.png",
+      image: "./images/desk.png",
       favorite: false,
     },
     {
@@ -187,7 +187,7 @@ export const useProductsStore = defineStore("products", () => {
       name: "Expenses",
       code: "[EXP_GEN]",
       price: "1.00",
-      image: "./images/expenses.png",
+      image: "./images/expenses.svg",
       favorite: false,
     },
     {
