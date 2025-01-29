@@ -30,13 +30,13 @@
           :key="key"
           :class="
             cn(
-              'px-[0.82rem] py-[0.25rem] rounded-[50rem] inline-flex items-center leading-3 relative max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[2.7ch]',
+              'px-[0.82rem] py-[0.25rem] rounded-[50rem] max-h-[17.8667px] inline-flex items-center leading-3 relative max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[2.7ch]',
               product.attributes.legs.color_code
             )
           "
         >
           <div
-            class="text-[0.85rem] font-[500] truncate inline-block whitespace-nowrap overflow-ellipsis max-w-full"
+            class="text-[0.75rem] font-[500] truncate inline-block whitespace-nowrap overflow-ellipsis max-w-full"
           >
             Legs: {{ product.attributes.legs.text }}
           </div>
@@ -46,13 +46,13 @@
           :key="key"
           :class="
             cn(
-              'px-[0.82rem] py-[0.25rem] rounded-[50rem] inline-flex items-center leading-3 relative max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[2.7ch]',
+              'px-[0.82rem] py-[0.25rem] rounded-[50rem] max-h-[17.8667px]  inline-flex items-center leading-3 relative max-w-full whitespace-nowrap overflow-hidden overflow-ellipsis min-w-[2.7ch]',
               product.attributes.color.color_code
             )
           "
         >
           <div
-            class="text-[0.85rem] font-[500] truncate inline-block whitespace-nowrap overflow-ellipsis max-w-full"
+            class="text-[0.75rem] font-[500] truncate inline-block whitespace-nowrap overflow-ellipsis max-w-full"
           >
             Color: {{ product.attributes.color.text }}
           </div>
