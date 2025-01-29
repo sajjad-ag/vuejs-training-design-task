@@ -34,31 +34,35 @@
           <div class="hidden md:flex">
             <span class="text-sm">1-80 / 126</span>
           </div>
-          <div class="flex rounded-sm overflow-hidden">
+          <div class="flex rounded-sm overflow-hidden gap-[1px]">
             <button
-              class="p-2 bg-gray-100 hover:bg-gray-200 border-r border-gray-300"
+              class="p-2 bg-[#e7e9ed] hover:bg-gray-200 cursor-pointer border-[1px] rounded-l-sm border-[#e7e9ed]"
             >
               <ChevronLeft class="w-4 h-4" />
             </button>
-            <button class="p-2 bg-gray-100 hover:bg-gray-200">
+            <button
+              class="p-2 bg-[#e7e9ed] hover:bg-gray-200 cursor-pointer border-[1px] rounded-r-sm border-[#e7e9ed]"
+            >
               <ChevronRight class="w-4 h-4" />
             </button>
           </div>
         </div>
 
         <!-- View Switcher -->
-        <div class="flex rounded-sm overflow-hidden border border-gray-200">
+        <div class="flex rounded-sm overflow-hidden gap-[1px]">
           <button
-            class="p-2 bg-gray-100 hover:bg-gray-200 border-r border-gray-300 hidden md:flex"
+            class="p-2 bg-[#e7e9ed] hover:bg-gray-200 hidden md:flex cursor-pointer rounded-l-sm border-[1px] border-[#e7e9ed]"
           >
             <AlignJustify class="w-4 h-4" />
           </button>
-          <button class="p-2 bg-gray-100 hover:bg-gray-200">
+          <button
+            class="p-2 bg-[#e6f2f3] hover:bg-gray-200 cursor-pointer border-[1px] rounded-r-sm border-[#56a9ad]"
+          >
             <AlignStartHorizontal class="w-4 h-4 fill-black" />
           </button>
           <button
             @click="toggleSearch()"
-            class="p-2 bg-gray-100 hover:bg-gray-200 border-l border-gray-300 flex md:hidden"
+            class="p-2 bg-[#e7e9ed] hover:bg-gray-200 border-[1px] border-[#e7e9ed] rounded-r-sm flex md:hidden cursor-pointer"
           >
             <Search class="w-4 h-4" />
           </button>
