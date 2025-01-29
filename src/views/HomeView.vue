@@ -6,8 +6,8 @@ const { products } = useProductsStore();
 </script>
 
 <template>
-  <main class="p-4">
-    <div class="grid grid-cols-12 gap-x-4 gap-y-2">
+  <main class="md:p-4 p-0">
+    <div class="grid grid-cols-12 gap-0 md:gap-x-4 md:gap-y-2">
       <ProductCard
         class="col-span-12 md:col-span-6 lg:col-span-3"
         v-for="product in products"

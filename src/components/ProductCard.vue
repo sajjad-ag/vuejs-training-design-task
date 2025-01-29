@@ -2,13 +2,13 @@
   <div
     :class="
       cn(
-        'p-4 flex justify-between border-2 border-gray-200  bg-white',
+        'p-2 grid grid-cols-12 md:border-2 border-t-2  border-gray-200  bg-white',
         product.class
       )
     "
   >
-    <div>
-      <div class="flex items-center gap-2">
+    <div class="col-span-10 pe-2">
+      <div class="flex items-center gap-1">
         <button class="cursor-pointer" @click="markFavorite(product)">
           <Star
             class="w-4 h-4 hover:fill-amber-300 hover:text-amber-300"
@@ -19,47 +19,46 @@
             "
           />
         </button>
-        <span class="font-bold">
+        <span class="text-[0.9625rem]">
           {{ product.name }}
         </span>
       </div>
-      <p>{{ product.code }}</p>
-      <div v-if="product.attributes" class="flex gap-2">
+      <span class="text-[0.9625rem]">{{ product.code }}</span>
+      <div v-if="product.attributes" class="flex gap-2 flex-wrap">
         <span
           v-if="product.attributes.legs"
           :key="key"
           :class="
-            cn(
-              'px-2 rounded-full font-semibold text-sm',
-              product.attributes.legs.color_code
-            )
+            cn('px-1 rounded-[50rem]', product.attributes.legs.color_code)
           "
         >
-          Legs: {{ product.attributes.legs.text }}
+          <div class="text-[0.85rem]">
+            Legs: {{ product.attributes.legs.text }}
+          </div>
         </span>
         <span
           v-if="product.attributes.color"
           :key="key"
           :class="
-            cn(
-              'px-2 rounded-full font-semibold text-sm',
-              product.attributes.color.color_code
-            )
+            cn('px-1 rounded-[50rem]', product.attributes.color.color_code)
           "
         >
-          Color: {{ product.attributes.color.text }}
+          <div class="text-[0.85rem]">
+            Color: {{ product.attributes.color.text }}
+          </div>
         </span>
       </div>
-      <p>Price: {{ product.price }}</p>
+      <div v-else></div>
+      <span class="text-[0.9625rem]">Price: {{ product.price }}</span>
     </div>
-    <div>
-      <img
-        v-if="product.image"
-        :src="product.image"
-        alt="Product Image"
-        class="w-16 h-16 bg-gray-200"
-      />
-      <CameraOff class="w-16 h-16 text-gray-200" v-else />
+    <div class="col-span-2 max-w-full h-fit">
+      <div class="h-fitw-full">
+        <img
+          :src="product.image ? product.image : './images/placeholder.png'"
+          alt="Product Image"
+          class="w-16 h-16"
+        />
+      </div>
     </div>
   </div>
 </template>

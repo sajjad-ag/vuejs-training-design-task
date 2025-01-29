@@ -1,102 +1,142 @@
-<script setup lang="ts">
-import {
-  AlignEndHorizontal,
-  AlignJustify,
-  AlignStartHorizontal,
-  ChevronLeft,
-  ChevronRight,
-  Clock,
-  Filter,
-  Settings,
-  ChevronDown,
-} from "lucide-vue-next";
-import { Search } from "lucide-vue-next";
-</script>
-
 <template>
-  <nav class="bg-white flex flex-col gap-3 px-3 pt-2 pb-3">
-    <div class="flex justify-between items-start flex-wrap gap-3 grow">
-      <div class="flex items-center gap-1 h-full">
+  <nav class="flex flex-col gap-3 px-3 pt-2 pb-3 bg-white">
+    <div class="flex flex-wrap justify-between items-lg-start gap-lg-3 grow">
+      <!-- Left Section (Breadcrumbs) -->
+      <div class="flex items-center gap-1 h-lg-100 order-0">
         <div class="flex gap-1">
-          <div class="flex gap-1">
-            <button
-              class="bg-[#6D4B65] rounded-sm px-[0.625rem] py-[0.3125rem] text-white cursor-pointer text-center"
-              type="button"
-            >
-              New
-            </button>
-          </div>
+          <button
+            class="btn-primary px-3 py-1.5 rounded-sm text-white bg-[#6D4B65] hover:bg-[#5d3d55]"
+          >
+            New
+          </button>
         </div>
-        <div class="flex gap-1 truncate">
+        <div class="gap-1 truncate hidden md:flex">
           <div class="flex text-[1.05rem] items-center min-w-0">
-            <span class="min-w-0 truncate"> Product Variants </span>
+            <span class="min-w-0 truncate">Product Variants</span>
           </div>
           <div class="inline-flex">
-            <div class="flex items-center gap-1 pe-2">
-              <div class="leading-none">
-                <button
-                  class="bg-transparent border-none cursor-pointer min-w-[5px]"
-                >
-                  <img
-                    src="/gear-fill-svgrepo-com.svg"
-                    class="w-[18px] h-[14px]"
-                  />
-                </button>
-              </div>
-            </div>
+            <button class="p-0 border-0 hover:bg-gray-100 rounded-full">
+              <img
+                src="/gear-fill-svgrepo-com.svg"
+                class="w-[18px] h-[14px]"
+                alt="Settings"
+              />
+            </button>
           </div>
         </div>
         <div class="me-auto"></div>
       </div>
-      <div class="relative">
-        <Search
-          class="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
-        />
-        <button
-          class="absolute top-1/2 left-10 transform -translate-y-1/2 bg-[#6D4B65] px-2 py-1 rounded-sm hover:bg-[#6D4B65]/80 cursor-pointer"
-        >
-          <Filter class="w-4 h-4 text-white" />
-        </button>
-        <input
-          type="text"
-          placeholder="Search..."
-          class="border border-gray-300 rounded-md p-1 pl-20 pr-8 w-full"
-        />
-        <button
-          class="absolute right-0 top-1/2 transform -translate-y-1/2 border border-l-[#F8F7F8] border-r-0 border-t-0 border-b-0 h-full w-6 rounded-r-sm cursor-pointer flex justify-center items-center"
-        >
-          <ChevronDown class="w-4 h-4 text-[#ABACAF] pointer-events-none" />
-        </button>
-      </div>
-      <div class="flex items-center gap-4">
-        <div class="flex items-center gap-1">
-          <button
-            class="bg-[#E7E8EC] p-2 rounded-sm hover:bg-gray-400 cursor-pointer"
-          >
-            <ChevronLeft class="w-4 h-4" />
-          </button>
-          <button
-            class="bg-[#E7E8EC] p-2 rounded-sm hover:bg-gray-400 cursor-pointer"
-          >
-            <ChevronRight class="w-4 h-4" />
-          </button>
+
+      <!-- Right Navigation -->
+      <div class="flex flex-wrap justify-end gap-1 gap-xl-3 order-1 lg:order-2">
+        <!-- Pagination -->
+        <div class="flex items-center gap-2">
+          <div class="hidden md:flex">
+            <span class="text-sm">1-80 / 126</span>
+          </div>
+          <div class="flex rounded-sm overflow-hidden">
+            <button
+              class="p-2 bg-gray-100 hover:bg-gray-200 border-r border-gray-300"
+            >
+              <ChevronLeft class="w-4 h-4" />
+            </button>
+            <button class="p-2 bg-gray-100 hover:bg-gray-200">
+              <ChevronRight class="w-4 h-4" />
+            </button>
+          </div>
         </div>
-        <div class="flex items-center">
+
+        <!-- View Switcher -->
+        <div class="flex rounded-sm overflow-hidden border border-gray-200">
           <button
-            class="bg-[#E7E8EC] p-2 rounded-l-sm hover:bg-gray-400 cursor-pointer"
+            class="p-2 bg-gray-100 hover:bg-gray-200 border-r border-gray-300 hidden md:flex"
           >
             <AlignJustify class="w-4 h-4" />
           </button>
-          <button class="bg-[#E7E8EC] p-2 hover:bg-gray-400 cursor-pointer">
-            <AlignStartHorizontal class="w-4 h-4" />
+          <button class="p-2 bg-gray-100 hover:bg-gray-200">
+            <AlignStartHorizontal class="w-4 h-4 fill-black" />
           </button>
           <button
-            class="bg-[#E7E8EC] p-2 rounded-r-sm hover:bg-gray-400 cursor-pointer"
+            @click="toggleSearch()"
+            class="p-2 bg-gray-100 hover:bg-gray-200 border-l border-gray-300 flex md:hidden"
           >
-            <Clock class="w-4 h-4" />
+            <Search class="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Section -->
+      <div
+        :class="{ hidden: !showSearch, 'md:flex': true }"
+        class="w-full order-2 lg:order-1 mt-1 lg:mt-0 lg:max-w-[470px] h-[32.6px]"
+      >
+        <div
+          class="relative flex items-center border border-gray-300 rounded-md w-full"
+        >
+          <Search class="absolute left-2 w-4 h-4" />
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full pl-8 pr-7 py-1.5 focus:outline-none h-[32.6px]"
+          />
+          <button
+            class="absolute right-0 px-[0.625rem] border-l border-l-[#d8dadd] py-[0.3125rem] flex justify-center items-center hover:bg-[#e7e9ed] rounded-r-sm h-full w-[30px] bg-transparent"
+          >
+            <ChevronDown class="w-4 h-4" />
           </button>
         </div>
       </div>
     </div>
   </nav>
 </template>
+
+<script setup>
+import {
+  ChevronLeft,
+  ChevronRight,
+  AlignJustify,
+  AlignStartHorizontal,
+  ChevronDown,
+  Search,
+} from "lucide-vue-next";
+import { ref, onMounted, onUnmounted } from "vue";
+
+const showSearch = ref(false);
+
+const toggleSearch = () => {
+  showSearch.value = !showSearch.value;
+};
+
+const handleResize = () => {
+  if (window.innerWidth >= 768) {
+    showSearch.value = true;
+  } else {
+    showSearch.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+  handleResize();
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", handleResize);
+});
+</script>
+
+<style scoped>
+.btn-primary {
+  cursor: pointer;
+  background-color: #6d4b65;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #5d3d55;
+}
+
+.search-section {
+  transition: opacity 0.2s, max-height 0.2s;
+}
+</style>
