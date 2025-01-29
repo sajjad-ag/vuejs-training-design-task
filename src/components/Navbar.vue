@@ -77,7 +77,7 @@
         <div
           class="relative flex items-center border border-gray-300 rounded-md w-full"
         >
-          <Search class="absolute left-2 w-4 h-4" />
+          <Search class="absolute left-2 w-[14px] h-[14px]" />
           <input
             type="text"
             placeholder="Search..."
