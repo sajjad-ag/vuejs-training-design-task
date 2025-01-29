@@ -58,8 +58,8 @@
           </div>
         </span>
       </div>
-      <!-- <div v-else></div>/ -->
-      <
+      <div v-else></div>
+
       <span class="text-[0.9625rem]">Price: {{ product.price }}</span>
     </div>
     <div class="col-span-2 max-w-full h-fit">

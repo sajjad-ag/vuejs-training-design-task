@@ -38,12 +38,12 @@
             <button
               class="p-2 bg-[#e7e9ed] hover:bg-gray-200 cursor-pointer border-[1px] rounded-l-sm border-[#e7e9ed]"
             >
-              <ChevronLeft class="w-4 h-4" />
+              <ChevronLeft class="w-5 h-5" />
             </button>
             <button
               class="p-2 bg-[#e7e9ed] hover:bg-gray-200 cursor-pointer border-[1px] rounded-r-sm border-[#e7e9ed]"
             >
-              <ChevronRight class="w-4 h-4" />
+              <ChevronRight class="w-5 h-5" />
             </button>
           </div>
         </div>
