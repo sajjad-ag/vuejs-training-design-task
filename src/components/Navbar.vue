@@ -1,6 +1,6 @@
 <template>
   <nav class="flex flex-col gap-3 px-3 pt-2 pb-3 bg-white">
-    <div class="flex flex-wrap justify-between items-lg-start gap-lg-3 grow">
+    <div class="flex flex-wrap justify-between items-lg-start gap-3 grow">
       <!-- Left Section (Breadcrumbs) -->
       <div class="flex items-center gap-1 h-lg-100 order-0">
         <div class="flex gap-1">
@@ -28,7 +28,9 @@
       </div>
 
       <!-- Right Navigation -->
-      <div class="flex flex-wrap justify-end gap-1 gap-xl-3 order-1 lg:order-2">
+      <div
+        class="flex flex-wrap justify-end md:gap-1 lg:gap-3 order-1 lg:order-2"
+      >
         <!-- Pagination -->
         <div class="flex items-center gap-2">
           <div class="hidden md:flex">
@@ -72,7 +74,7 @@
       <!-- Search Section -->
       <div
         :class="{ hidden: !showSearch, 'md:flex': true }"
-        class="w-full order-2 lg:order-1 mt-1 lg:mt-0 lg:max-w-[470px] h-[32.6px]"
+        class="w-full order-2 lg:order-1 mt-1 lg:mt-0 lg:max-w-[470px] h-[32.6px] search-section"
       >
         <div
           class="relative flex items-center border border-gray-300 rounded-md w-full"
