@@ -14,17 +14,39 @@ import { Search } from "lucide-vue-next";
 </script>
 
 <template>
-  <nav class="bg-white p-4 shadow-md">
-    <div class="flex justify-between flex-wrap gap-4">
-      <div class="flex items-center gap-2">
-        <span class="rounded-sm text-white bg-[#6D4B65] px-2 py-1">New</span>
-        <div class="flex items-end gap-2">
-          <span> Product Variants </span>
-          <img
-            src="/gear-fill-svgrepo-com.svg"
-            class="w-[13px] h-[13px] my-auto"
-          />
+  <nav class="bg-white flex flex-col gap-3 px-3 pt-2 pb-3">
+    <div class="flex justify-between items-start flex-wrap gap-3 grow">
+      <div class="flex items-center gap-1 h-full">
+        <div class="flex gap-1">
+          <div class="flex gap-1">
+            <button
+              class="bg-[#6D4B65] rounded-sm px-[0.625rem] py-[0.3125rem] text-white cursor-pointer text-center"
+              type="button"
+            >
+              New
+            </button>
+          </div>
         </div>
+        <div class="flex gap-1 truncate">
+          <div class="flex text-[1.05rem] items-center min-w-0">
+            <span class="min-w-0 truncate"> Product Variants </span>
+          </div>
+          <div class="inline-flex">
+            <div class="flex items-center gap-1 pe-2">
+              <div class="leading-none">
+                <button
+                  class="bg-transparent border-none cursor-pointer min-w-[5px]"
+                >
+                  <img
+                    src="/gear-fill-svgrepo-com.svg"
+                    class="w-[18px] h-[14px]"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="me-auto"></div>
       </div>
       <div class="relative">
         <Search
