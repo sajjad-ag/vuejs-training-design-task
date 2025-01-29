@@ -10,12 +10,14 @@
             New
           </button>
         </div>
-        <div class="gap-1 truncate hidden md:flex">
-          <div class="flex text-[1.05rem] items-center min-w-0">
+        <div class="flex gap-1 truncate">
+          <div class="text-[1.05rem] items-center min-w-0 hidden md:flex">
             <span class="min-w-0 truncate">Product Variants</span>
           </div>
           <div class="inline-flex">
-            <button class="p-0 border-0 hover:bg-gray-100 rounded-full">
+            <button
+              class="md:p-0 md:border-0 md:hover:bg-gray-100 md:rounded-full md:bg-transparent p-2 h-[37.6px] w-[37.6px] bg-[#e7e9ed] hover:bg-gray-200 cursor-pointer border-[1px] rounded-l-sm border-[#e7e9ed]"
+            >
               <img
                 src="/gear-fill-svgrepo-com.svg"
                 class="w-[18px] h-[14px]"
@@ -28,9 +30,7 @@
       </div>
 
       <!-- Right Navigation -->
-      <div
-        class="flex flex-wrap justify-end md:gap-1 lg:gap-3 order-1 lg:order-2"
-      >
+      <div class="flex flex-wrap justify-end gap-1 lg:gap-3 order-1 lg:order-2">
         <!-- Pagination -->
         <div class="flex items-center gap-2">
           <div class="hidden md:flex">
