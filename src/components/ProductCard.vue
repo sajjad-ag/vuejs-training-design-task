@@ -63,7 +63,7 @@
       <span class="text-[0.9625rem]">Price: {{ product.price }}</span>
     </div>
     <div class="col-span-2 max-w-full h-fit">
-      <div class="h-fitw-full">
+      <div class="h-fit w-full">
         <img
           :src="product.image ? product.image : './images/placeholder.png'"
           alt="Product Image"
