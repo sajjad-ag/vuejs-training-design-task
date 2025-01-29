@@ -2,7 +2,7 @@
   <div
     :class="
       cn(
-        'p-2 grid grid-cols-12 md:border-2 border-t-2  border-gray-200  bg-white',
+        'p-2 grid grid-cols-12 md:border-[1px] border-t-[1px]  border-[#dcdee1]  bg-white',
         product.class
       )
     "
@@ -15,7 +15,7 @@
             :class="
               product.favorite
                 ? 'text-amber-300 fill-amber-300'
-                : 'text-gray-200'
+                : 'text-[#b7bbc1]'
             "
           />
         </button>
