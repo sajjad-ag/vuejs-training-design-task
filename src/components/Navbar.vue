@@ -49,20 +49,20 @@
         </div>
 
         <!-- View Switcher -->
-        <div class="flex rounded-sm overflow-hidden gap-[1px]">
+        <div class="flex rounded-sm overflow-hidden gap-1 md:gap-[1px]">
           <button
             class="p-2 bg-[#e7e9ed] hover:bg-gray-200 hidden md:flex cursor-pointer rounded-l-sm border-[1px] border-[#e7e9ed]"
           >
             <AlignJustify class="w-4 h-4" />
           </button>
           <button
-            class="p-2 bg-[#e6f2f3] hover:bg-gray-200 cursor-pointer border-[1px] rounded-r-sm border-[#56a9ad]"
+            class="p-2 md:bg-[#e6f2f3] bg-[#e7e9ed] hover:bg-gray-200 cursor-pointer border-[1px] rounded-sm md:rounded-r-sm md:rounded-none border-[#e7e9ed] md:border-[#56a9ad]"
           >
             <AlignStartHorizontal class="w-4 h-4 fill-black" />
           </button>
           <button
             @click="toggleSearch()"
-            class="p-2 bg-[#e7e9ed] hover:bg-gray-200 border-[1px] border-[#e7e9ed] rounded-r-sm flex md:hidden cursor-pointer"
+            class="p-2 bg-[#e7e9ed] hover:bg-gray-200 border-[1px] border-[#e7e9ed] rounded-sm flex md:hidden cursor-pointer"
           >
             <Search class="w-4 h-4" />
           </button>
