@@ -1,6 +1,6 @@
 <template>
   <nav class="flex flex-col gap-3 px-3 pt-2 pb-3 bg-white">
-    <div class="flex flex-wrap justify-between items-lg-start gap-3 grow">
+    <div class="flex flex-wrap justify-between items-lg-start lg:gap-3 grow">
       <!-- Left Section (Breadcrumbs) -->
       <div class="flex items-center gap-1 h-lg-100 order-0">
         <div class="flex gap-1">
